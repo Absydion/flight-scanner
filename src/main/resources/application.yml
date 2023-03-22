@@ -1,0 +1,27 @@
+logging:
+  level:
+    root: info
+    com.example.mypackage: debug
+  appenders:
+    console:
+      type: console
+    file:
+      type: file
+      fileName: log/app.log
+      immediateFlush: true
+      append: false
+      layout:
+        type: pattern
+        pattern: "%d [%t] %-5p %c{1}:%L - %m%n"
+    status: debug
+  loggers:
+    com.example.mypackage:
+      level: debug
+      appenders:
+        - console
+        - file
+  root:
+    level: info
+    appenders:
+      - console
+      - file
