@@ -1,9 +1,6 @@
 package com.app.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.AllArgsConstructor;
@@ -22,8 +19,13 @@ public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @ManyToOne (fetch = FetchType.LAZY)
+    private Watchlist watchlist;
 
+
+    @Column
     private String Flightnumber;
+
 
     private String Departueplace;
 
@@ -34,5 +36,8 @@ public class Flight {
     private LocalTime Arrivaltime;
 
     private String Flightstatus;
+
+    private double price;
+
 
 }
