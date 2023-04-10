@@ -13,20 +13,19 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table
 public class Watchlist {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @OneToMany(mappedBy = "FlightList")
+    @OneToMany(mappedBy = "flightList")
     @Column
-    private List<Flight> FlightList;
+    private List<Flight> flightList;
     @Column
     private String user;
     @Column
     private String name;
     @Column
-    private LocalDateTime created_at_datetime;
+    private LocalDateTime createdAtDatetime;
     @Column
-    private LocalDateTime updated_at_datetime;
+    private LocalDateTime updatedAtDatetime;
 }

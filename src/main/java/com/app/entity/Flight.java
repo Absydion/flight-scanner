@@ -20,24 +20,17 @@ public class Flight {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne (fetch = FetchType.LAZY)
-    private Watchlist watchlist;
-
-
+    private Watchlist watchList;
     @Column
-    private String Flightnumber;
+    private String flightNumber;
+    private String departuePlace;
+    private String arrivalPlace;
 
+    private LocalDate departueDate;
+    private LocalTime arrivalTime;
+    private String flightStatus;
+    private Double price;
 
-    private String Departueplace;
-
-    private String Arrivalplace;
-
-    private LocalDate Departuedate;
-
-    private LocalTime Arrivaltime;
-
-    private String Flightstatus;
-
-    private double price;
 
 
 }
