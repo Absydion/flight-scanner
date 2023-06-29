@@ -17,7 +17,7 @@ import java.util.List;
     //finding by arrival place from DB
     List<Watchlist> findByarrivalPlace(String arrivalPlace);
     //finding by departue palce from DB
-    List<Watchlist> findBydepartuePlace (String departuePlace);
+    List<Watchlist> findBydepartuePlace (String departurePlace);
     //saving new Flight (method deleted due to JPA)
 
     //method used for deleting any FLight by it's id (method deleted due to JPA)
