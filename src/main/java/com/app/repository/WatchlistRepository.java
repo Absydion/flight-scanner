@@ -22,7 +22,7 @@ import java.util.List;
 
     //method used for deleting any FLight by it's id (method deleted due to JPA)
 
-    //ACHTUNG, ZAPYTAĆ PANA DAISHI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
     @Modifying
     @Query("UPDATE Watchlist w SET w.price = :price WHERE w.id = :id")
     void updatePriceById(Long id, BigDecimal price);
