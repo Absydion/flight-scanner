@@ -1,4 +1,4 @@
-package Discord;
+package com.app.service;
 
 public class DiscordService {
 }
