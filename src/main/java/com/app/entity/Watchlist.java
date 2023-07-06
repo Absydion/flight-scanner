@@ -16,7 +16,7 @@ import lombok.Setter;
 public class Watchlist {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     @OneToMany(mappedBy = "flightList")
     @Column
     private List<Flight> flightList;

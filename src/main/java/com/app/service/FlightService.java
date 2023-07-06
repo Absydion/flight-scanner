@@ -1,5 +1,6 @@
 package com.app.service;
 
+
 import com.app.entity.Flight;
 import com.app.repository.FlightRepository;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -9,6 +10,8 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 
 import java.time.LocalDate;
 import java.util.List;
